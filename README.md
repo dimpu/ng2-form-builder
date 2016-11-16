@@ -1,4 +1,10 @@
-# Browserify Angualr2 Quickstart App
+## ng2-form-builder
+
+Read the complete article at http://www.techumber.com/from-builder-using-angular-2-and-bootstrap/
+
+
+
+## Browserify Angualr2 Quickstart App
 
 Angular 2 Quick start Application. 
 
@@ -35,7 +41,7 @@ npm run minify
 
 
 
-You application code will be at /src direcotory.
+You application code will be at /src directory.
 
 
 

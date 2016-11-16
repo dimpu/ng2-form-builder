@@ -4,10 +4,11 @@
   "description": "anqular2 quickstart  application with browserify,tsify,budo",
   "main": "index.js",
   "scripts": {
-    "build": "browserify src/main.prod.ts src/vendor.ts -p tsify -p [ factor-bundle -o dist/main.js -o dist/vendor.js ] -o dist/common.js",
+    "build": "browserify src/main.prod.ts src/vendor.ts -p tsify -p [ factor-bundle -o dist/main.js -o dist/lib.js ] -o dist/common.js",
     "start": "budo src/main.dev.ts:dist/app.js: --live --open --css=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\" --title=\"angualr2 Quickstart\"  --  -p tsify",
     "preminify": "npm run build",
-    "minify": "uglifyjs dist/common.js dist/vendor.js  dist/main.js --mangle-props --name-cache > dist/app.min.js"
+    "minify": "uglifyjs dist/common.js dist/lib.js  dist/main.js --mangle-props --name-cache > dist/app.min.js",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [
     "angualr2",
@@ -35,6 +36,7 @@
     "browserify": "^3.7.0",
     "budo": "^9.2.1",
     "factor-bundle": "^2.5.0",
+    "gh-pages": "^0.11.0",
     "tsify": "^2.0.2",
     "tslint": "^3.15.1",
     "typescript": "^2.0.9",
