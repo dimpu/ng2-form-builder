@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "browserify src/main.prod.ts src/vendor.ts -p tsify -p [ factor-bundle -o dist/main.js -o dist/vendor.js ] -o dist/common.js",
-    "start": "budo src/main.dev.ts:dist/app.js: --live --open --title=\"angualr2 Quickstart\"  --  -p tsify",
+    "start": "budo src/main.dev.ts:dist/app.js: --live --open --css=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\" --title=\"angualr2 Quickstart\"  --  -p tsify",
     "preminify": "npm run build",
     "minify": "uglifyjs dist/common.js dist/vendor.js  dist/main.js --mangle-props --name-cache > dist/app.min.js"
   },
@@ -22,12 +22,13 @@
     "@angular/common": "^2.1.2",
     "@angular/compiler": "^2.1.2",
     "@angular/core": "^2.1.2",
+    "@angular/forms": "^2.1.2",
     "@angular/platform-browser": "^2.1.2",
     "@angular/platform-browser-dynamic": "^2.1.2",
     "core-js": "^2.4.1",
-    "rxjs": "5.0.0-beta.12",
+    "rxjs": "^5.0.0-beta.12",
     "ts-helpers": "^1.1.2",
-    "zone.js": "0.6.21"
+    "zone.js": "^0.6.21"
   },
   "devDependencies": {
     "@types/core-js": "^0.9.34",
